@@ -202,8 +202,8 @@ npm run start
 
 ## Roadmap
 
-- [ ] Create the Prisma Schema for the 4 models: Image, Character, Session, Leaderboard
-- [ ] Create the Authentication HTTP Requests for POST /auth/register, /auth/login and /auth/me for User registration, login and obtaining authorisation details
+- [ ] Create the Prisma Schema for the 3 models: User, Message, Conversation
+- [x] Create the Authentication HTTP Requests for POST /auth/register, /auth/login and /auth/me for User registration, login and obtaining authorisation details
 - [ ] Create User HTTP GET Requests for GET /users and /users/:userId to obtain information for all users and a specific user, respectively
 - [ ] Create User HTTP PUT Request for PUT /users/:userId to update the user profile for an existing user
 - [ ] Create Messages HTTP POST Request for POST /messages to create a new message
