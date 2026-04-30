@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 
-import createLocals from './middleware/locals.middleware.js';
 import errorHandler from './middleware/errors.middleware.js';
 
 import indexRouter from './routes/index.routes.js';
@@ -13,7 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(createLocals);
+// Set up CORS for the local React app as well as the deployed Vercel App
+app.use(
+  cors({
+    origin: ['http://localhost:5173', 'https://vercel.com/'],
+  })
+);
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
