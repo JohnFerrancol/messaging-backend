@@ -4,6 +4,7 @@
 [![The Odin Project](https://img.shields.io/badge/The%20Odin%20Project-A9792B?logo=theodinproject&logoColor=fff)](#)
 
 ## Overview
+
 This is a project from [The Odin Project](https://theodinproject.com): [Project: Messaging App](https://www.theodinproject.com/lessons/nodejs-messaging-app). This messaging app is inspired by [WhatsApp](https://web.whatsapp.com/). This allows users to create a user profile, send messages to each other, have a friends list and create group chats.
 
 ## Tech Stack
@@ -134,4 +135,4 @@ npm run start
 
 ## Roadmap
 
-- [ ] Create the Authentication HTTP Requests for POST /auth/register, /auth/login and /auth/me for User registration, login and obtaining authorisation details
+- [x] Create the Authentication HTTP Requests for POST /auth/register, /auth/login and /auth/me for User registration, login and obtaining authorisation details
