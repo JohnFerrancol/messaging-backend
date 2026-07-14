@@ -1,11 +1,10 @@
-# Express Template
+# Messaging App Backend
 
 [Link to Front end](#)<br/><br/>
 [![The Odin Project](https://img.shields.io/badge/The%20Odin%20Project-A9792B?logo=theodinproject&logoColor=fff)](#)
 
 ## Overview
-
-This is a project from [The Odin Project](https://theodinproject.com): [Project: ](#).
+This is a project from [The Odin Project](https://theodinproject.com): [Project: Messaging App](https://www.theodinproject.com/lessons/nodejs-messaging-app). This messaging app is inspired by [WhatsApp](https://web.whatsapp.com/). This allows users to create a user profile, send messages to each other, have a friends list and create group chats.
 
 ## Tech Stack
 
@@ -19,26 +18,40 @@ This is a project from [The Odin Project](https://theodinproject.com): [Project:
 
 ## API Documentation
 
-### XXX Routes
+### Base Route
 
 ```sh
-GET /
+/api/v1
 ```
 
 - Returns all available images
 
-### XXX Routes
+### Authentication Routes
 
 ```sh
-GET /xxx
+POST /auth/register
 ```
 
-- XXX
+- Registers a new user
+- Returns a JSON object with the JSON Web token for persistent user sessions
+
+```sh
+POST /auth/login
+```
+
+- Logs in an existing user
+- Returns a JSON object with the JSON Web token for persistent user sessions
+
+```sh
+GET /auth/me
+```
+
+- Returns a JSON object with the user's JSON web token and user information
 
 ## Project Structure
 
 ```sh
-backend/
+messaging-backend/
 │
 ├── prisma/
 │   │
@@ -49,17 +62,16 @@ backend/
 ├── src/
 │   │
 │   ├── controllers/
-│   │   ├── game.controller.js
-│   │   └── leaderboards.controller.js
+│   │   ├── auth.controller.js
+│   │   └── messages.controller.js
 │   │
 │   ├── routes/
-│   │   ├── game.routes.js
-│   │   └── leaderboards.routes.js
+│   │   ├── auth.routes.js
+│   │   └── messages.routes.js
 │   │
 │   ├── services/
-│   │   ├── game.services.js
-│   │   ├── characters.services.js
-│   │   └── leaderboards.services.js
+│   │   ├── auth.services.js
+│   │   ├── messages.services.js
 │   │
 │   ├── config/
 │   │   ├── passport.js
@@ -74,8 +86,6 @@ backend/
 └── .prettierrc
 └── eslint.config.js
 └── prisma.config.js
-
-
 ```
 
 ## Getting Started
@@ -99,7 +109,7 @@ Getting started on running the webpack server to your localhost, localhost:3000
 1. Cloning the repository
 
 ```sh
-git clone git@github.com:JohnFerrancol/photo-tagging.git
+git clone git@github.com:JohnFerrancol/messaging-backend.git
 ```
 
 2. Set up the local environment and fill in DATABASE_URL and Supabase information
@@ -124,5 +134,4 @@ npm run start
 
 ## Roadmap
 
-- [ ] XXX
-- [ ] XXX
+- [ ] Create the Authentication HTTP Requests for POST /auth/register, /auth/login and /auth/me for User registration, login and obtaining authorisation details
